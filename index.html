@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p id = "output"></p>
+    <script>
+      /*Use the following array and the reduce method to calculate the average number of launches among all countries.
+       Print the Average*/
+     var rockets = [
+      { country:'Russia', launches:32 },
+      { country:'US', launches:23 },
+      { country:'China', launches:16 },
+      { country:'Europe(ESA)', launches:7 },
+      { country:'India', launches:4 },
+      { country:'Japan', launches:3 }
+     ];
+     var e = "";   
+    
+        for (var y=0; y<rockets.length; y++){
+        e +=  rockets[y].country + "," + rockets[y].launches + "<br/>";
+        }
+
+      var sum = rockets.reduce(function(y, x) {
+        return y + x.launches;
+        }, 0); 
+
+      var sum2 = sum/y   
+
+      document.getElementById("output").innerHTML = sum2;
+
+
+    </script>
+  </body>
+</html>
